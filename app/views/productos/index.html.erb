@@ -1,0 +1,29 @@
+<div class="index">
+  <%= link_to("Agregar nuevo producto", {:action => 'new'}, :class => 'btn btn-primary action') %>
+
+  <table class="table">
+      <tr>
+        <th>&nbsp;</th>
+        <th>Marca</th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+
+    <% @productos.each do |producto| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= producto.position %></td>
+      <td><%= producto.marca.nombre if producto.marca %></td>
+      <td><%= producto.nombre %></td>
+      <td><%= producto.descripcion %></td>
+      <td><%= producto.precio %></td>
+      <td class="actions">
+        <%= link_to("Mostrar", {:action => 'show', :id => producto.id}, :class => 'action btn btn-primary') %>
+        <%= link_to("Editar", {:action => 'edit', :id => producto.id}, :class => 'action btn btn-primary') %>
+        <%= link_to("Eliminar", {:action => 'delete', :id => producto.id}, :class => 'action btn btn-primary') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,0 +1,21 @@
+<%= link_to("<< Regresar", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="show edit">
+  <h2>Mostrar marca</h2>
+<br>
+  <table class="table">
+    <tr>
+      <th>Nombre</th>
+      <td><%= @marca.nombre %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @marca.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @marca.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

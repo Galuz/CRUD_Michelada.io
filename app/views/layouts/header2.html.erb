@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proyecto Michelada.io</title>
+     <%= stylesheet_link_tag('application', :media => 'all') %>
+  </head>
+  <body>
+    <!-- before yield -->
+    <div id ="main">
+      <% if !flash[:notice].blank? %>
+        <div class="notice">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+      <div id ="content">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a href="#" class="navbar-brand"></a>
+              <img src="">
+            </div>
+              <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li><a href="/marcas/index">Marcas</a></li>
+                  <li class="active"><a href="/productos/index">Productos</a></li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    <%= yield %>
+    <!--after yield -->
+      </div>
+    </div>
+    <div id="footer">
+      <p id="copyright">&copy; German Gonzalez Moreno</p>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <%= javascript_include_tag('application') %>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<%= link_to("<< Regresar", {:action => 'index'}, :class => 'back-link') %>
+<div>
+<h2>Eliminar Marca</h2>
+  <br>
+  <%= form_for(:producto, :url => {:action => 'destroy', :id => @marca.id}) do |f| %>
+  <p class="form-buttons" >¿Estas seguro que quieres eliminar esta marca?</p>
+  <table class="edit table">
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+    </tr>
+    <tr>
+      <td><%= @marca.id %></td>
+      <td><%= @marca.nombre %></td>
+    </tr>
+  </table
+  <div class="form-buttons">
+    <%= submit_tag("Eliminar Marca" , :class => 'btn btn-primary') %>
+  </div>
+  <% end %>
+</div>

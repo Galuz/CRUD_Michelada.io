@@ -1,0 +1,33 @@
+<%= link_to("<< Regresar", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="show edit">
+  <h2>Mostrar Producto</h2>
+<br>
+  <table class="table">
+    <tr>
+      <th>Marca</th>
+      <td><%= @producto.marca_id %></td>
+    </tr>
+    <tr>
+      <th>Nombre</th>
+      <td><%= @producto.nombre %></td>
+    </tr>
+    <tr>
+      <th>Descripcion</th>
+      <td><%= @producto.descripcion %></td>
+    </tr>
+    <tr>
+      <th>Precio</th>
+      <td><%= @producto.precio %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @producto.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @producto.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

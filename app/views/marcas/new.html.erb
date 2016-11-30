@@ -1,0 +1,15 @@
+<%= link_to("<< Regresar", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="new">
+  <h2>Agregar Marca</h2>
+
+  <%= form_for(:marca, :url => {:action => 'create'}) do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= submit_tag("Agregar Marca", :class => 'btn btn-primary') %>
+    </div>
+
+  <% end %>
+</div>

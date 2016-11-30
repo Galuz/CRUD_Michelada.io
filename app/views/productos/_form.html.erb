@@ -1,0 +1,23 @@
+<%= error_messages_for(@producto) %>
+<table>
+  <tr>
+    <th>Marca</th>
+    <td><%= f.select(:marca_id, @marcas.map {|m| [m.nombre, m.id]}) %></td>
+  </tr>
+<tr>
+  <th>Nombre</th>
+  <td><%= f.text_field(:nombre) %></td>
+</tr>
+<tr>
+  <th>Descripcion</th>
+  <td><%= f.text_field(:descripcion) %></td>
+</tr>
+<tr>
+  <th>precio</th>
+  <td><%= f.text_field(:precio) %></td>
+</tr>
+<tr>
+  <th>Posicion</th>
+  <td><%= f.select(:position, 1..@producto_count) %></td>
+</tr>
+</table>

@@ -1,0 +1,11 @@
+<%= error_messages_for(@marca) %>
+<table>
+  <tr>
+    <th>nombre</th>
+    <td><%= f.text_field(:nombre) %></td>
+  </tr>
+  <tr>
+    <th>position</th>
+    <td><%= f.select(:position, 1..@marca_count) %></td>
+  </tr>
+</table>

@@ -1,0 +1,22 @@
+<div class="index">
+  <%= link_to("Agregar nueva marca", {:action => 'new'}, :class => 'btn btn-primary action') %>
+  <table class="table">
+      <tr>
+        <th>&nbsp;</th>
+        <th>Marca</th>
+        <th>Acciones</th>
+      </tr>
+
+    <% @marcas.each do |marca| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= marca.position %></td>
+      <td><%= marca.nombre %></td>
+      <td class="actions">
+        <%= link_to("Mostrar", {:action => 'show', :id => marca.id}, :class => 'action btn btn-primary') %>
+        <%= link_to("Editar", {:action => 'edit', :id => marca.id}, :class => 'action btn btn-primary') %>
+        <%= link_to("Eliminar", {:action => 'delete', :id => marca.id}, :class => 'action btn btn-primary') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

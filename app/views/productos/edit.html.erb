@@ -1,0 +1,15 @@
+<%= link_to("<< Regresar", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="edit">
+  <h2>Editar Producto</h2>
+
+  <%= form_for(:producto, :url => {:action => 'update', :id => @producto.id}) do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= submit_tag("Actualizar" , :class => 'btn btn-primary') %>
+    </div>
+
+  <% end %>
+</div>
